@@ -1,20 +1,13 @@
-import {  Grid } from '@material-ui/core'
 import React from 'react'
 import {Chatbot as ChatBot} from 'react-chatbot-kit'
 import Config from './../Chatbot/Config'
 import MessageParser from './../Chatbot/MessageParser'
 import ActionProvider from './../Chatbot/ActionProvider'
+import './../Chatbot/chatbot.css'
 
-
-export default function Chatbot() {
+export default function Chatbot(props) {
+    console.log(props)
     return (
-        <Grid container justify="center" alignContent="space-around" alignItems="center" style={{height: '90vh', background:'#00000056'}}>
-            <Grid item>
-                <div >
-                <ChatBot config={Config}  messageParser={MessageParser}  actionProvider={ActionProvider} />
-                </div>
-               
-            </Grid>
-        </Grid>
+     <ChatBot config={Config}  messageParser={MessageParser}  actionProvider={ActionProvider} styles={{width: '500px'}} />
     )
 }

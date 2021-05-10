@@ -18,26 +18,44 @@ const useStyles = makeStyles(theme => ({
    NavLink: {
        color: '#fff'
    },
+   NavTitle: {
+    [theme.breakpoints.down('sm')]: {
+        fontSize: '1.3rem'
+    }
+   },
    Menu: {
-       padding: theme.spacing(2)
+       padding: theme.spacing(2),
+       [theme.breakpoints.down('sm')]:{
+           padding: theme.spacing(1)
+       }
    },
 
    Container: {
+        padding: '0',
+        margin: 'auto ',
+        paddingTop: theme.spacing(1.5),
+        paddingBottom: theme.spacing(1.5),
 
-        margin: 'auto '
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '12px'
+        }
   
+   },
+   Trim: {
+       padding: '0'
    }
 }));
 
 export default function Nav() {
     const classes = useStyles();
-    const [toggle, setToggle] = useState(0)
+    const [toggle, setToggle] = useState(false)
     return (
         <div>
             <AppBar position="static">
                 <Toolbar>
                     <Container classes= {{
-                        maxWidthLg: classes.Container
+                        maxWidthLg: classes.Container,
+                        
                     }} >
                     
                         <Grid container justify="flex-start" alignItems="center" alignContent="center">
@@ -45,7 +63,7 @@ export default function Nav() {
                         <Hidden mdUp>
                             <div >
                                <div className={classes.Menu}>
-                                   <Button  onClick= {() => setToggle(1)}>
+                                   <Button  onClick= {() => setToggle(true)}>
                                          <MenuIcon/>
                                    </Button>
                              
@@ -57,12 +75,12 @@ export default function Nav() {
                   
                      <Grid item>
                             
-                                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignContent: 'center', alignItems: 'center',   textAlign: 'center'}}>
-                                    <Typography variant="h5" style={{textAlign: 'center'}}>Snake Bite Classifier</Typography>
-                                    <Typography variant="subtitle2" >Data Science Lab</Typography>
-                                </div>
-                           
-                            </Grid>
+                        <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignContent: 'center', alignItems: 'center',   textAlign: 'center'}}>
+                            <Typography variant="h5" style={{textAlign: 'center'}} className={classes.NavTitle}>Snake Bite Classifier</Typography>
+                            <Typography variant="subtitle2" >Data Science Lab</Typography>
+                        </div>
+                    
+                     </Grid>
                         <Grid item xs   /> 
                         <Grid item>
                             <div  style={{width: 'fit-content', margin: '0'}}>
@@ -77,7 +95,7 @@ export default function Nav() {
                 </Toolbar>
             </AppBar>
 
-           <Drawer open={toggle} MenuActive= {() => {setToggle(0)}} />
+           <Drawer open={toggle} MenuActive= {() => {setToggle(false)}} />
  
         {/* <MuiDrawer open={toggle} anchor="left">
             <List className={classes.Drawer}>

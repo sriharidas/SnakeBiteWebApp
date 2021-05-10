@@ -6,8 +6,12 @@ const useStyles = makeStyles(theme => ( {
         '& > *': {
             padding: '16px 0',
             textAlign: 'justify',
-            fontWeight: '450'
-        }
+            fontWeight: '450',
+            [theme.breakpoints.down('sm')]: {
+                fontSize: '1rem'
+            }
+        },
+       
     }
 }))
 

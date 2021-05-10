@@ -22,7 +22,7 @@ export default function Menu() {
         <Grid container>
             {
                 items.map(item => (
-                        <Grid item> 
+                        <Grid item key="item.title"> 
                             <Button >
                                <Link className={classes.MenuBtn} to={item.path}>
                                {item.title}
