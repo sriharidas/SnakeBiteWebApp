@@ -2,7 +2,7 @@ import { createChatBotMessage } from "react-chatbot-kit";
 import SnakeBiteRemedy from "./DefaultMessages/SnakeBiteRemedy";
 import Symptoms from "./DefaultMessages/Symptoms";
 import VenomousSnake from "./DefaultMessages/VenomousSnake";
-
+import React from 'react'
 const config = {
   initialMessages: [createChatBotMessage("Hello. I am a chatbot")],
   botName: "Mythic Bot",

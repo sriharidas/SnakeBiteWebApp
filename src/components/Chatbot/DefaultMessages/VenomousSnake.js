@@ -1,18 +1,18 @@
-import React from 'react'
-import {venomousSnake} from './../../../Items'
+import React from "react";
+import { venomousSnake } from "./../../../Items";
 export default function VenomousSnake() {
-    return (
+  return (
+    <div>
+      {venomousSnake.map((data) => (
         <div>
-        {  
-          venomousSnake.map( data => (
-              <>
-               <img src={data.img} style={{width: '100px', height: '100px'}} alt="indian cobra" />
-                <p>
-                    {data.Desc}
-                </p></>
-               
-            ))
-         }
+          <img
+            src={data.img}
+            style={{ width: "100px", height: "100px" }}
+            alt="indian cobra"
+          />
+          <p>{data.Desc}</p>
         </div>
-    )
+      ))}
+    </div>
+  );
 }

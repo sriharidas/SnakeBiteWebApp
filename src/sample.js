@@ -37,10 +37,8 @@
 //           <Box Component="p" style={{background: 'red'}} xs={6} spacing={2} m={2}>Box6</Box>
 
 //         </Container>
-    
-    
-//         </Grid>
 
+//         </Grid>
 
 //         <Grid container justify={'space-between'} xs={11}>
 //           <Grid item>Text1</Grid>
@@ -60,12 +58,9 @@
 //             <Button variant="contained" color="primary">Button 1</Button>
 //             <Button  variant="outlined" color="primary">Button 1</Button>
 //           </Grid>
-            
 
 //         </Grid> */}
 
-
-  
 //   {/* <AppBar >
 //   <Tabs
 //     textcolor="primary"
@@ -75,7 +70,6 @@
 //           <Tab label="item 2">Item !</Tab>
 //           <Tab label="item 2">Item !</Tab>
 //           <Tab label="item 2">Item !</Tab>
-   
 
 //         </Tabs>
 //   </AppBar> */}
@@ -92,7 +86,7 @@
 //                 <FormControlLabel control={<Radio/>} value="radio 1" label="radio 3" />
 //                 <FormControlLabel control={<Radio/>}  value="radio 4" label="radio 4" />
 //                 </RadioGroup>
-              
+
 //             </FormControl>
 
 //             <FormControl>
@@ -102,15 +96,15 @@
 //                  <MenuItem value={1}>Help</MenuItem>
 //                  <MenuItem value={1}>Help</MenuItem>
 //                  <MenuItem value={1}>Help</MenuItem>
- 
+
 //                </Select>
 //              }  />
-             
+
 //             </FormControl>
 //           </Container>
 //         </div>
 //     )
-        
+
 //   }
 // }
 // export default Index;
@@ -118,89 +112,122 @@
 
 /* Development */
 
-import React, { Component, useState } from 'react'
-import ReactDOM from 'react-dom'
-import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography'
-import Container from '@material-ui/core/Container'
-import Grid from '@material-ui/core/Grid'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Menu from '@material-ui/core/Menu'
-import MenuItem from '@material-ui/core/MenuItem'
-import FormControl from '@material-ui/core/FormControl'
-import  InputLabel  from '@material-ui/core/InputLabel'
-import TextField from '@material-ui/core/TextField'
-import FormGroup from '@material-ui/core/FormGroup'
+import React, { Component, useState } from "react";
+import ReactDOM from "react-dom";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import InputLabel from "@material-ui/core/InputLabel";
+import TextField from "@material-ui/core/TextField";
+import FormGroup from "@material-ui/core/FormGroup";
 function Index() {
-  
-    const [anchorE1, setanChorE1] = React.useState(null)
+  const [anchorE1, setanChorE1] = React.useState(null);
 
-    
-    return (
-        <div>
-          <AppBar position="static">
-              <Toolbar>
-                <Grid container justify="space-between" spacing={2} md={10} lg={11} style={{boxSizing: 'border-box', fontSize: '1.2rem'}} >
-                  {/* <Grid item><div>Home</div></Grid>
+  return (
+    <div>
+      <AppBar position="static">
+        <Toolbar>
+          <Grid
+            container
+            justify="space-between"
+            spacing={2}
+            md={10}
+            lg={11}
+            style={{ boxSizing: "border-box", fontSize: "1.2rem" }}
+          >
+            {/* <Grid item><div>Home</div></Grid>
                   <Grid item> <div>About us</div></Grid>
                   <Grid item> <div>login</div></Grid> */}
-                  <div >
-                  <Button style={{flexGrow: 0, textAlign: 'left', color: '#FAFAFA'}}>
-                    Menu
-                  </Button>
-                  <Menu  open={0 || Boolean(null)} style={{width: '200px'}} >
-                    <MenuItem>Home</MenuItem>
-                    <MenuItem>Home</MenuItem>
-                    <MenuItem>Home</MenuItem>
-                    <MenuItem>Home</MenuItem>
-                    <MenuItem>Home</MenuItem>
-
-                  </Menu>
-                  <Button style={{flexGrow: 0, textAlign: 'left', color: '#FAFAFA'}} ></Button>
-                  <Button style={{flexGrow: 0, textAlign: 'left', color: '#FAFAFA'}}  >Test</Button>
-                  <Button style={{flexGrow: 0, textAlign: 'left', color: '#FAFAFA'}}  >chatbot</Button>
-                  <Button style={{flexGrow: 0, textAlign: 'left', color: '#FAFAFA'}}  >contact us</Button>
-                  </div>
-                  
-                  
-                </Grid>
-                
-              </Toolbar>
-            </AppBar>
-          <Container >
-
-            
             <div>
-            <Typography variant="h2" component="div" >Welcome</Typography>
-            <Button variant="outline" background="primary" color="primary" label=" login">Login</Button>
-            <Button variant="contained" color="secondary" label=" login">Login</Button>
-            <Button variant="contained" color="primary" label=" login">Login</Button>
+              <Button
+                style={{ flexGrow: 0, textAlign: "left", color: "#FAFAFA" }}
+              >
+                Menu
+              </Button>
+              <Menu open={0 || Boolean(null)} style={{ width: "200px" }}>
+                <MenuItem>Home</MenuItem>
+                <MenuItem>Home</MenuItem>
+                <MenuItem>Home</MenuItem>
+                <MenuItem>Home</MenuItem>
+                <MenuItem>Home</MenuItem>
+              </Menu>
+              <Button
+                style={{ flexGrow: 0, textAlign: "left", color: "#FAFAFA" }}
+              ></Button>
+              <Button
+                style={{ flexGrow: 0, textAlign: "left", color: "#FAFAFA" }}
+              >
+                Test
+              </Button>
+              <Button
+                style={{ flexGrow: 0, textAlign: "left", color: "#FAFAFA" }}
+              >
+                chatbot
+              </Button>
+              <Button
+                style={{ flexGrow: 0, textAlign: "left", color: "#FAFAFA" }}
+              >
+                contact us
+              </Button>
             </div>
-            
-            <form>
-              <FormGroup>
-              <FormControl>
-                    <inputLabel>Username</inputLabel>
-                    <TextField  type="password" variant ="outlined" label="username" required name="password"  />
-                </FormControl>
-                <FormControl>
-                    <inputLabel>Username</inputLabel>
-                    <TextField  type="password" variant ="outlined" label="username" required   />
-                </FormControl>
-              </FormGroup>
-               
-            </form>
-
-          </Container>
-          
-
+          </Grid>
+        </Toolbar>
+      </AppBar>
+      <Container>
+        <div>
+          <Typography variant="h2" component="div">
+            Welcome
+          </Typography>
+          <Button
+            variant="outline"
+            background="primary"
+            color="primary"
+            label=" login"
+          >
+            Login
+          </Button>
+          <Button variant="contained" color="secondary" label=" login">
+            Login
+          </Button>
+          <Button variant="contained" color="primary" label=" login">
+            Login
+          </Button>
         </div>
-    );
-  
+
+        <form>
+          <FormGroup>
+            <FormControl>
+              <inputLabel>Username</inputLabel>
+              <TextField
+                type="password"
+                variant="outlined"
+                label="username"
+                required
+                name="password"
+              />
+            </FormControl>
+            <FormControl>
+              <inputLabel>Username</inputLabel>
+              <TextField
+                type="password"
+                variant="outlined"
+                label="username"
+                required
+              />
+            </FormControl>
+          </FormGroup>
+        </form>
+      </Container>
+    </div>
+  );
 }
 
 export default Index;
 
-
-ReactDOM.render(<Index/>, document.getElementById('root'))
+ReactDOM.render(<Index />, document.getElementById("root"));
